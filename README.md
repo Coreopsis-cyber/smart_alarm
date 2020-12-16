@@ -40,7 +40,24 @@ Serving Flask app "main" (lazy loading)
  127.0.0.1:5000
  
  On the left will display a list of alarms that are set and have yet to go off. On the right it will display a list of notifications for COVID, the weather and the news. In the centre contains a form to set an alarm.
- Press the calender in the corner 
+ Press the calender in the corner and set a date and time for the alarm, then add the name of your alarm in the bar with the words update label. The two check boxes allow you to choose if there's a news and weather briefing in the verbal announcement of the alarm. You can pick one or the other or both. All alarms announce COVID data as well as the name of the alarm.
+ 
+ There may be a delay on the alarms of up to a minute as it refreshes every 60 seconds. 
+ 
+ # Developer Information
+ 
+ This program contains a number of files:
+
+Template folder which contains the HTML template for the program.
+Static folder containing images.
+config.json is a persistent file containing private and important data which can change the workings of the program.
+sys.log logs all events performed by the application including every time the page refreshes.
+covid.py is the module for retrieving and formatting the covid data from the covid 19 API.
+weather.py is the module for retrieving and formatting the weather data from the weather API.
+weather.py is the module for retrieving and formatting the top news data from the news API.
+global_variables.py contains the variables used by all other modules together
+main.py is the module in which the code can be run from, it is the module that directly deals with updating the interface e.g., setting and deleting alarms
+ 
 
 # Licence
 
