@@ -71,6 +71,7 @@ Serving Flask app "main" (lazy loading)
 # Updates
 
 For the latest version of this code click the link to access the GitHub repository with the latest updated code. 
+"[https://github.com/umennear/smart_alarm]"
 
 
 # Licence
