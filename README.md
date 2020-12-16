@@ -4,7 +4,10 @@ This code creates a smart alarm with a user interface in the browser. It gives t
 
 # Prerequisites 
 
-This code functions on python 3.7 or above.
+This code functions on python 3.7 or above to download this onto your machine got to "https://www.python.org/downloads/".
+
+To run the code, you will need a web browser google chrome preferably, you can download it here "https://www.google.com/chrome/". Other web browsers (e.g safari) may not exectute as intended.
+
 For this code to function it requires an API key for both the weather and news modules. This can be aquired by going on "https://newsapi.org/" and "https://openweathermap.org/api" and signing up for a free API key. this should then be added the the configuration file called "config.json" in the spaces. In that file you may also customise your location by changing the city to the city you are currently in.
 It also requires 
 
