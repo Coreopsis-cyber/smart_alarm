@@ -12,11 +12,12 @@ For this code to function it requires an API key for both the weather and news m
 
 It also requires certain modules to be installed:
 To do this open up the command line (search command line in your apps if you have difficulty finding it) and manually install them one at a time by copying each line seperately into the command line and pressing enter after each one.
-
+```sh
 $ pip3 install flask
 $ pip3 install pyttsx3
 $ pip3 install uk_covid19
 $ pip3 install requests
+```
 
 As the API calls are in real time therefore internet connection is required for this application.
 
@@ -29,35 +30,48 @@ Copy the following line into the command line and press enter:
 $ python3 main.py
 
 You should see this message appear:
-
+```sh
 Serving Flask app "main" (lazy loading)
  * Environment: production
    WARNING: This is a development server. Do not use it in a production deployment.
    Use a production WSGI server instead.
  * Debug mode: on
- 
+ ```
  After this, go to web browser (chrome preferably) and enter in the search bar at the top:
  127.0.0.1:5000
  
- On the left will display a list of alarms that are set and have yet to go off. On the right it will display a list of notifications for COVID, the weather and the news. In the centre contains a form to set an alarm.
+ On the left will display a list of alarms that are set and have yet to go off. On the right it will display a list of notifications for COVID, the weather and the news. Each element of both lists will have a `X` button on them to remove the element from the list. In the centre contains a form to set an alarm.
  Press the calender in the corner and set a date and time for the alarm, then add the name of your alarm in the bar with the words update label. The two check boxes allow you to choose if there's a news and weather briefing in the verbal announcement of the alarm. You can pick one or the other or both. All alarms announce COVID data as well as the name of the alarm.
  
  There may be a delay on the alarms of up to a minute as it refreshes every 60 seconds. 
  
+ 
  # Developer Information
  
- This program contains a number of files:
+ This program contains these files:
 
-Template folder which contains the HTML template for the program.
-Static folder containing images.
-config.json is a persistent file containing private and important data which can change the workings of the program.
-sys.log logs all events performed by the application including every time the page refreshes.
-covid.py is the module for retrieving and formatting the covid data from the covid 19 API.
-weather.py is the module for retrieving and formatting the weather data from the weather API.
-weather.py is the module for retrieving and formatting the top news data from the news API.
-global_variables.py contains the variables used by all other modules together
-main.py is the module in which the code can be run from, it is the module that directly deals with updating the interface e.g., setting and deleting alarms
+-Template folder which contains the HTML template for the program.
+
+-Static folder containing images.
+
+-config.json is a persistent file containing private and important data which can change the workings of the      program.
+
+-sys.log logs all events performed by the application including every time the page refreshes.
+
+-covid.py is the module for retrieving and formatting the covid data from the covid 19 API.
+
+-weather.py is the module for retrieving and formatting the weather data from the weather API.
+
+-news.py is the module for retrieving and formatting the top news headlines from the news API.
+
+-global_variables.py contains the variables used by all other modules together
+
+-main.py is the module in which the code can be run from, it is the module that directly deals with updating the interface e.g., setting and deleting alarms
  
+# Updates
+
+For the latest version of this code click the link to access the GitHub repository with the latest updated code. 
+
 
 # Licence
 
