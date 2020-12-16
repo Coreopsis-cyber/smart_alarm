@@ -12,6 +12,7 @@ For this code to function it requires an API key for both the weather and news m
 
 It also requires certain modules to be installed:
 To do this open up the command line (search command line in your apps if you have difficulty finding it) and manually install them one at a time by copying each line seperately into the command line and pressing enter after each one.
+
 ```sh
 $ pip3 install flask
 $ pip3 install pyttsx3
@@ -71,7 +72,7 @@ Serving Flask app "main" (lazy loading)
 # Updates
 
 For the latest version of this code click the link to access the GitHub repository with the latest updated code. 
-"[https://github.com/umennear/smart_alarm]"
+[https://github.com/umennear/smart_alarm]
 
 
 # Licence
