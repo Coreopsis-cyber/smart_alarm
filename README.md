@@ -14,6 +14,7 @@ It also requires certain modules to be installed:
 To do this open up the command line (search command line in your apps if you have difficulty finding it) and manually install them one at a time by copying each line seperately into the command line and pressing enter after each one.
 
 ```sh
+$ pip3 install sched
 $ pip3 install flask
 $ pip3 install pyttsx3
 $ pip3 install uk_covid19
@@ -55,7 +56,7 @@ Serving Flask app "main" (lazy loading)
 
 -Static folder containing images.
 
--config.json is a persistent file containing private and important data which can change the workings of the      program.
+-config.json is a persistent file containing private and important data which can change the workings of the program.
 
 -sys.log logs all events performed by the application including every time the page refreshes.
 
@@ -77,9 +78,11 @@ For the latest version of this code click the link to access the GitHub reposito
 
 # Licence
 
+Authors: Matt Collison, Ursula Mennear
+
 MIT License
 
-Copyright (c) 2020 Ursula Mennear
+Copyright (c) 2020 Ursula Mennear 
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
