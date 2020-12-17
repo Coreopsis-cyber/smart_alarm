@@ -1,6 +1,6 @@
 # Smart Alarm
 
-This code creates a smart alarm with a user interface in the browser. It gives the user the ability to schedule and cancel alarms by filling out a form on the html template as well as recieve top news headlines, the local weather and regional covid statistics in the form of notifications should they be requested. 
+This code creates a smart alarm with a user interface in the browser. It gives the user the ability to schedule and cancel alarms by filling out a form on the html template as well as receive top news headlines, the local weather and regional covid statistics in the form of notifications should they be requested. 
 
 # Prerequisites 
 
@@ -8,10 +8,10 @@ This code functions on python 3.7 or above to download this onto your machine go
 
 To run the code, you will need a web browser google chrome preferably, you can download it here "https://www.google.com/chrome/". Other web browsers (e.g safari) may not exectute as intended.
 
-For this code to function it requires an API key for both the weather and news modules. This can be aquired by going on "https://newsapi.org/" and "https://openweathermap.org/api" and signing up for a free API key. this should then be added the the configuration file called "config.json" in-between the quotation marks for the appropriate key. In that file you may also customise your location for the weather api by changing the city to the city you are currently in. You will also need an area code to get covid 19 data from a specific region in the UK. Use "https://findthatpostcode.uk/areatypes/rgn.html" to find the one for your area.
+For this code to function it requires an API key for both the weather and news modules. This can be acquired by going on "https://newsapi.org/" and "https://openweathermap.org/api" and signing up for a free API key. This should then be added the the configuration file called "config.json" in-between the quotation marks for the appropriate key. In that file you may also customise your location for the weather api by changing the city to the city you are currently in. You will also need an area code to get covid 19 data from a specific region in the UK. Use "https://findthatpostcode.uk/areatypes/rgn.html" to find the one for your area.
 
 It also requires certain modules to be installed:
-To do this open up the command line (search command line in your apps if you have difficulty finding it) and manually install them one at a time by copying each line seperately into the command line and pressing enter after each one.
+To do this open up the command line (search command line in your apps if you have difficulty finding it) and manually install them one at a time by copying each line separately into the command line and pressing enter after each one.
 
 ```sh
 $ pip3 install sched
@@ -19,6 +19,7 @@ $ pip3 install flask
 $ pip3 install pyttsx3
 $ pip3 install uk_covid19
 $ pip3 install requests
+$ pip3 install pytest
 ```
 
 As the API calls are in real time therefore internet connection is required for this application.
@@ -28,8 +29,9 @@ As the API calls are in real time therefore internet connection is required for 
 Through the command line navigate to the CA3 directory (if you are finding that difficult go to "https://www.git-tower.com/learn/git/ebook/en/command-line/appendix/command-line-101/") which is the program folder.  
 
 Copy the following line into the command line and press enter:
-
-$ python3 main.py
+```sh
+$ python3 -m CA3_code_package.main
+```
 
 You should see this message appear:
 ```sh
@@ -47,6 +49,19 @@ Serving Flask app "main" (lazy loading)
  
  There may be a delay on the alarms of up to a minute as it refreshes every 60 seconds. 
  
+ # Testing
+
+ This program has tests built into it so it will run smoothly. It has unittests, try... except statements and other things.
+
+ When the program is run it automatically does these tests to make sure there are no errors during the run time.
+
+ Using the command line interpreter, you can do these tests without needing to run the program itself. First you must navigate to the project folder, CA3_project through the command line and then use the following command:
+ 
+ ```sh
+ $ python3 -m pytest
+ ```
+ If all tests are done correctly, the response should be a line of green dots. If there are some red dots some of the tests have failed.
+
  
  # Developer Information
  
@@ -69,6 +84,8 @@ Serving Flask app "main" (lazy loading)
 -global_variables.py contains the variables used by all other modules together
 
 -main.py is the module in which the code can be run from, it is the module that directly deals with updating the interface e.g., setting and deleting alarms
+
+-testing.py is the module that contains the testing framework for the program making sure everything is working
  
 # Updates
 
